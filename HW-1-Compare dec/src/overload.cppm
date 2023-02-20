@@ -60,13 +60,20 @@ bool Fraction::operator>(Fraction other)
 	{
 		result = true;
 	}
-
+	
 	return result;
 }
 
 bool Fraction::operator<(Fraction other)
 {
-	return !(*this > other);
+	if (*this == other)
+	{
+		return false;
+	}
+	else
+	{
+		return !(*this > other);
+	}
 }
 
 bool Fraction::operator>=(Fraction other)
